@@ -1,0 +1,133 @@
+<!DOCTYPE html><html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You Mom ❤️</title><style>
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ff758c, #ffb6c1, #ff4d79);
+}
+
+.container {
+    color: white;
+    z-index: 2;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    text-shadow: 0 0 20px red;
+    animation: heartbeat 1.2s infinite;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+button {
+    background: white;
+    color: #ff3366;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 0 20px pink;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    animation: float 6s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes heartbeat {
+    0%,100% {transform: scale(1);}
+    50% {transform: scale(1.12);}
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style></head><body><div class="container"><h1>I LOVE YOU, MOM! ❤️</h1>
+
+<h2>🌹 To the Best Mother in the World 🌹</h2>
+
+<p>
+    Thank you for everything, Mom.<br>
+    Thank you for your love,<br>
+    your sacrifices, and your care.
+</p>
+
+<p>
+    You are my blessing,<br>
+    my inspiration, and my forever hero.
+</p>
+
+<button onclick="showLove()">
+    CLICK FOR A SURPRISE ❤️
+</button>
+
+<h2 id="message"></h2>
+
+</div><script>
+
+function createHeart() {
+    let heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    let emojis = ["❤️","💕","💖","🌹","💗","🥰"];
+
+    heart.innerHTML = emojis[
+        Math.floor(Math.random() * emojis.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (20 + Math.random() * 30) + "px";
+
+    heart.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 250);
+
+function showLove() {
+
+    document.getElementById("message").innerHTML =
+    "I LOVE YOU SO MUCH, MOM! 🥹❤️<br>YOU WILL ALWAYS BE MY QUEEN! 👑";
+
+    for(let i = 0; i < 50; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+
+}
+
+</script></body>
+                                                                    </html>
